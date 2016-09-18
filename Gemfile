@@ -11,8 +11,10 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise', '~> 4.2'
 gem 'simple_form', '~> 3.3', '>= 3.3.1'
 gem 'haml', '~> 4.0.5'
-gem 'pg', group: :production
-gem 'rails_12factor'
+group :production do
+  gem 'rails_12factor'
+  gem 'pg'
+end
 group :development, :test do
   gem 'byebug', platform: :mri
 
